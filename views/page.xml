@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="homepage_patient" name="patient homepage">
+
+        <html lang="en">
+        <head>
+            <title>odoo</title>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" type="image/png" href="/hospital/static/images/icons/favicon.ico"/>
+            <link rel="stylesheet" type="text/css" href="/hospital/static/vendor/bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" type="text/css" href="/hospital/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+            <link rel="stylesheet" type="text/css" href="/hospital/static/vendor/animate/animate.css" />
+            <link rel="stylesheet" type="text/css" href="/hospital/static/vendor/select2/select2.min.css" />
+            <link rel="stylesheet" type="text/css" href="/hospital/static/vendor/perfect-scrollbar/perfect-scrollbar.css" />
+            <link rel="stylesheet" type="text/css" href="/hospital/static/css/util.css" />
+            <link rel="stylesheet" type="text/css" href="/hospital/static/css/main.css" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <link rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />    
+            <title>bottle</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <link rel="stylesheet" href="sweetalert2.min.css"/>
+            <script src="sweetalert2.all.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <link rel="stylesheet"
+                href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />    
+        <style>
+          @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&amp;display=swap");
+          @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&amp;display=swap");
+          @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&amp;display=swap");
+          * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style-type: none;
+            overflow-x: hidden;
+          }
+          .header {
+            box-shadow: 0.1rem 0.1rem 0.1rem rgb(226, 240, 240);
+            padding: 1rem 20px;
+            position: fixed;
+            width: 100%;
+            transition:width 5s;
+          }
+          .lead-cen {
+            width:200px;
+            height:35.5px;
+          }
+          .navbar ul {
+          display: flex;
+          align-items: center;
+          background-color: rgb(255, 255, 255);
+          justify-content: space-between;
+          transition:width 1s;
+        }
+
+        .navbar a {
+          text-decoration: none;
+          color: rgb(59, 57, 57);
+        }
+        .navbar a:hover {
+          color: #49a0e7;
+        }
+        .navbar-logo {
+          flex: 1;
+          font-size: 1.5rem;
+          margin-left: 5rem;
+          font-weight: bold;
+          color: black;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .navbar-toggle {
+          display: none;
+        }
+        .navbar-toggle:hover {
+          cursor: pointer;
+        }
+        .navbar-links {
+          font-size: 0.95rem;
+          font-weight: 800 !important;
+          color: black;
+          font-family: "Montserrat", sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+          .sticky {
+            box-shadow: 0.1rem 0.1rem 0.1rem rgb(226, 240, 240);
+            background-color: white;
+            width: 100%;
+          }
+          .btn-contact {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500 !important;
+            font-size: 0.9rem;
+            color: rgb(3, 3, 3);
+            margin-right: 5rem;
+          }
+        a  .appelznous {
+
+          transition: all 0.3s ease 8s;
+          color: white;
+          }
+          .appelznous {
+            border: none;
+            cursor: pointer;
+            margin: 0;
+            font-weight: 700 !important;
+          }
+          .envoyer {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500 !important;
+            font-size: 0.93rem;
+            color: white;
+            padding: 4px 4px 4px 4px;
+            background-image: linear-gradient(rgb(59, 151, 187),rgb(0, 174, 255));
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease 8s;
+            text-align: center;
+            margin-top: 1.5rem;
+            width: 22rem;
+          }
+          .headlead {
+            font-size: 2rem;
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            font-style: italic;
+            font-weight: 600 !important;
+            padding: 1rem;
+            line-height: 20px;
+          }
+          .p-text {
+            padding: 1rem;
+            font-size: 1.45rem;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            font-weight: 600 !important;
+            color: rgb(56, 63, 66);
+            line-height: 1.9rem;
+          }
+          .p-textprpos {
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            font-weight: 600 !important;
+            color: rgb(56, 63, 66);
+            line-height: 1.9rem;
+            white-space: pre-line;
+          }
+          .coding {
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            color: #100f10;
+            font-size: 1.7rem !important;
+              white-space: pre-line;
+            position: relative;
+            text-transform: uppercase;
+            -webkit-text-stroke: 0.3vw #5e5e5e;
+          }
+          
+          .coding::before {
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #37b9f1;
+            overflow: hidden;
+            position: absolute;
+            content: attr(data-text);
+            -webkit-text-stroke: 0vw #f7f7fe;
+            animation: animate 4s linear infinite;
+          }
+          .phone-media {
+            
+            white-space: pre-line;font-size: 1rem;font-weight: 800;color: rgba(0,0,0,0.6);font-size: 1.1rem;
+          }
+          @keyframes animate {
+            0%,
+            10%,
+            100% {
+              width: 0;
+            }
+          
+            70%,
+            90% {
+              width: 100%;
+            }
+          }
+          .tech-lead {
+            padding: 1rem;
+            font-size: 1rem;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            font-weight: 600 !important;
+            color: rgb(42, 176, 233);
+            line-height: 1.9rem;
+          }
+          .tech-leadaprops {
+            font-size: 1.8rem;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            font-weight: 600 !important;
+            color: rgb(42, 176, 233);
+          }
+          .div-pr {
+            
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          }
+          .man {
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            top: 4rem;
+            position: relative;
+            right: 5rem;
+          }
+          .graph {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            top: 1rem;
+            position: relative;
+            right: 35rem;
+          }
+          .user-wrapper .log:hover {
+            cursor: pointer;
+          }
+          .arb1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            top: 8rem;
+            right: 15rem;
+            position: relative;
+          }
+          .arb2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            top: 8rem;
+            position: relative;
+            right: 33rem;
+          }
+          .img-pr {
+            animation: animation 6s ease-in-out infinite;
+      box-shadow: 0 0px 0px 0px white;
+      transform: translatey(0px);
+            width: 180rem;
+            height: 15rem;
+          }
+          .img-mane {
+          }
+          .logo {
+            cursor: pointer;
+            color: rgb(3, 3, 3);
+          }
+          .nav-lead .li-lead {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 900 !important;
+            padding: 0px 20px;
+            color: rgb(0, 0, 0);
+            font-size: 0.9rem;
+          }
+          .nav-lead .li-lead .list-lead {
+            transition: all 0.3s ease 8s;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+          }
+
+          .btn-contact {
+            padding: 12px 25px;
+            background-image: linear-gradient(rgb(59, 151, 187),rgb(0, 174, 255));
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease 8s;
+            color: white;
+            font-weight: 700 !important;
+            margin-right: 0.8rem;
+          }
+          .navbar-links {
+            display: inline-block;
+            padding: 0 15px;
+          }
+        
+          .navbar-hv a:hover {
+            color: rgb(32, 80, 170)                                         vv;
+          }
+          .navbar-toggle {
+            display: none;
+          }
+          @media (max-width: 1200px) {
+            .header {
+              box-shadow: 0rem 0rem 0rem rgb(70, 168, 207);
+              padding: 1rem 20px;
+              position: fixed;
+              top: 0%;
+              width: 100%;
+              z-index: 100000;
+              transition:width 5s;
+            }
+          .navbar ul {
+            flex-wrap: wrap;
+            transition:width 1s;
+          }
+          .border-line
+          {
+            border: none;
+          }
+          .navbar-toggle {
+            display: block;
+            font-size: 1.5rem;
+          }
+          .navbar-links {
+            display: none;
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+            transition:width 10s;
+          }
+          .active {
+            display: block;
+            transition:width 1s ease-in;
+          }
+          .navbar-logo {
+          flex: 1;
+          font-size: 1.5rem;
+          margin-left: 1rem;
+          font-weight: bold;
+          color: black;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        }
+        .info-contact {
+          display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+          .info-contact {
+            margin-top: 5rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+          }
+          #revenu_about {
+            margin-top: 10rem;
+          }
+          .revenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            margin-top: -8.95rem;
+          }
+          .entr-confiance {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+          }
+          .marg {
+            margin-top: 5rem;
+          }
+          .h1-text {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            color: rgb(99, 97, 96);
+            text-align: center;
+          }
+          .head-txt {
+            font-size: 2.5rem !important;
+            font-weight: 700 !important;
+            border-bottom: 2px solid #0088a9;
+            white-space: pre-line;
+            color: rgb(82, 78, 78);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .appelznous {
+            font-size: 1rem !important;
+            font-weight: 900 !important;
+            color: black;
+          }
+          .strong-cn {
+            color: black;
+          }
+          .center-cn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          .btn-contactnous {
+            padding: 9px;
+            background-color: #0088a9;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease 8s;
+            text-align: center;
+            margin-top: 2rem;
+            width: 50rem;
+            
+          }
+          .btn-cn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 1.6rem;
+          }
+          .header-service {
+            font-size: 1rem;
+            font-weight: 600 !important;
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            margin-top: 2rem;
+          }
+          
+          footer {
+            background-image: radial-gradient(rgb(15, 15, 15), black);
+            margin-top: 4rem;
+          }
+          .headcenter {
+            font-family: "Montserrat", sans-serif;
+          }
+          .ul-footer .li-footer {
+            font-family: "Montserrat", sans-serif;
+            padding: 1rem 1rem 1rem 0rem;
+            color: rgb(192, 201, 202);
+            font-size: 0.8rem;
+            list-style-type: lower-roman;
+          }
+          .infosocite {
+            padding: 3rem;
+          }
+          .head-cent {
+            font-size: 1.4rem;
+            color: #0088a9;
+          }
+          .map-societe {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+          }
+          .copy {
+            padding: 2rem;
+          }
+          .icon-call {
+            font-size: 1rem;
+            color: white;
+            margin-right: 0.5rem;
+          }
+          footer .footer-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-left: 3rem;
+            margin-right: 3rem;
+            color: white;
+            border-bottom: 0.2px solid rgb(78, 76, 76);
+          }
+          .ul-footer {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+          .social n {
+            margin-top: 1rem;
+          }
+          .ul-soc {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            order: 2;
+            font-size: 1.6rem;
+          }
+          .li-soc {
+            margin: 1rem;
+          }
+          .social i:hover {
+            color: #49a0e7;
+            cursor: pointer;
+          }
+
+          .text-socite {
+            font-size: 1rem;
+            color: rgb(179, 174, 179);
+            line-height: 18px;
+          }
+          .par-societe {
+            padding: 1rem 1rem 1rem 0rem;
+            line-height: 1.8rem;
+          }
+          .med-soc {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600 !important;
+            font-style: italic;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 0.6rem;
+          }
+          .cop-lead {
+            background-color: rgb(54, 94, 94);
+            text-align: center;
+            font-size: 0.9rem;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+          }
+          .image {
+            width: 10rem;
+            height: 10rem;
+          }
+          .img-confiance {
+            margin: 2rem;
+            background-color: rgb(255, 250, 250);
+            padding: 2rem;
+            box-shadow: rgba(165, 166, 167, 0.12) 0px 2px 4px 0px,
+              rgba(183, 186, 187, 0.32) 0px 2px 16px 0px;
+            border-radius: 10px;
+          }
+          .centre-con {
+            padding: 3rem;
+            color: rgb(0, 0, 0);
+            text-align: center;
+          }
+
+          .messanger-send {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 40px;
+            color: rgb(81, 174, 202);
+            right: 50px;
+            font-size: 2.5rem;
+          }
+          .fab {
+            color: rgb(255, 255, 255);
+          }
+          .img-contact {
+            width: 55rem;
+            height: 33rem;
+          }
+          @media (max-width: 900px) {
+            .img-contact {
+              width: 23rem;
+              height: 25rem;
+            }
+            .info-leadcenter{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+            .icon_pos {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-direction: column;
+            }
+            .builder {
+              padding: 2rem;
+            }
+            .img-mail img {
+              width: 28rem;
+              height: 30rem;
+            }
+            .phone-media {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              white-space: pre-line;
+              font-size: 1rem;
+              font-weight: 800;
+              color: rgba(0,0,0,0.6);
+              margin-left: 3.38rem;
+            }
+            .head-close {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+                padding: 1rem 1rem 1rem 1rem;
+                margin: 1rem;
+            }
+            .card-acl {
+              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+              background-color: white;
+              border-radius: 1rem;
+              width: 40rem;
+            }
+            .bac_con .services {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items:center;
+              width: 18rem;
+
+            }
+            .bd-ads , .bd-cl , .bd-ls {
+              padding: 0rem;
+              text-align: center;
+              font-size: 1.9rem;
+              white-space: pre-line;
+            }
+            .acht {
+              background-image: radial-gradient(#38d2f8,#0088a9) ;
+              border-radius: 0.5rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+              width: 7rem;
+              color: white;
+              text-align: center;
+              font-size: 1.2rem;
+              font-weight: bold;
+            }
+            .h-ads {
+              padding: 0rem;
+              font-size: 1rem;
+              text-align: center;
+              border-bottom: 0.5px solid #49a0e7;
+            }
+            .btn-contactnous {
+              padding: 9px;
+              background-color: #0088a9;
+              border: none;
+              border-radius: 1rem;
+              cursor: pointer;
+              transition: all 0.3s ease 8s;
+              text-align: center;
+              margin-top: 2rem;
+              width: 22rem;
+              
+            }
+            .media-info,.envoyer{
+              margin-left: 5rem;
+          }
+            .media-info .info{
+              height: 2.7rem;
+              padding: 1rem;
+              width: 22rem;
+              padding: 0 20px;
+          line-height: 50px;
+          border: 1px solid #ececec;
+          color: rgba(0,0,0,.6);
+          font-weight: 900!important;
+          }
+            .services-ents {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+            .img-icon {
+              padding: 2rem 2rem 2rem 2rem;
+              border-radius: 10px;
+            }
+            footer .footer-info {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 2rem;
+            }
+            .infosocite {
+              padding: 0.6rem;
+            }
+              .ul-footer {
+                display: flex;
+                flex-direction: column;
+              }
+            .info-contact {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+            .head-txt {
+              font-size: 2em !important;
+              font-weight: 700 !important;
+              border-bottom: 2px solid #0088a9;
+              white-space: pre-line;
+              color: rgb(82, 78, 78);
+            }
+            .revenu {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              margin-top: -3rem;
+            }
+            
+            .img-revenu {
+              width: 33rem;
+              height: 28rem;
+            }
+            .bac_con {
+              background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+          }
+          .svg {
+            overflow: hidden;
+            vertical-align: middle;
+            margin-top: 8rem;
+        }
+        .svg1 {
+          overflow: hidden;
+          vertical-align: middle;
+          margin-top: -6rem;
+      }
+        
+          @media (max-width:1050px) {
+            .contact-alert{
+      
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-direction: column;
+              margin-top: 7rem; 
+            }
+            .bac_con .services {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 2rem;
+            }
+          }
+          .contact-alert{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5rem; 
+          }
+          .head-close {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+            .con-nous {
+        }
+        .form-info1{
+            margin-top: 2rem;
+        }
+        .form-info2{
+            margin-top: 1rem;
+        }
+        .form-message{
+            margin-top: 1rem;
+        }
+        .envoyer{
+            margin-top: 3rem;
+        }
+        .envoyer-info{
+            padding:  0.6rem 2rem 0.6rem 2rem;
+            background-color: var(--lead-bleu);
+            border: none;
+            border-radius: 0.6rem;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .p-info{
+            padding: 0.4rem;
+            margin-top: 0.2rem;
+        }
+        .info{
+            height: 2.5rem;
+            padding: 1rem;
+            width: 25rem;
+            padding: 0 20px;
+        line-height: 50px;
+        border: 1px solid #ececec;
+        color: rgba(0,0,0,.6);
+        font-weight: 900!important;
+        }
+        .info:focus{
+            outline: none;
+        }
+        .message:focus{
+            outline: none;
+        }
+        .message {
+            padding: 0 20px;
+            line-height: 50px;
+        border: 1px solid #ececec;
+        color: rgba(0,0,0,.6);
+        font-weight: 900!important;
+        font-size: 1rem;
+        }
+        .img_email {
+          width: 45rem;
+          height: 40rem;
+        }
+        .label_error {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 0.92rem;
+          color: red;
+          margin-left: 1rem;
+          line-height: 1rem;
+        }
+        .blank {
+          border: 1px solid red;
+        }
+        .red {
+          color: red;
+        }
+        </style>
+        </head>
+        <body>
+        <section>
+          <div class="contact-alert" id="app">
+              <div class="img-mailing">
+                  <div class="div-form">
+                      <form class="formsubmit" id="form" method="POST">
+                          <div class="form-info1 media-info">
+                              <input name="name" id="name" class="info" type="text" placeholder="enter your name*"
+                                value="" />
+                              <strong class="label_error"><label class="labelname"></label></strong>
+                          </div>
+                          <div class="form-info1 media-info">
+                              <input name="email" id="email" class="info" type="text" placeholder="enter your email*"
+                                value="" autofocus="true" />
+                              <strong class="label_error"><label class="labelemail"></label></strong>
+                          </div>
+                          <div class="form-info2 media-info">
+                              <input name="age" id="age" class="info" type="text"
+                                  placeholder="enter you age*" value="" />
+                              <strong class="label_error"><label class="labelage"></label></strong>
+                          </div>
+                          <div class="form-message media-info">
+                              <textarea value="" name="message" class="message" id="" cols="38" rows="2"
+                                  placeholder="Votre Message ici*"></textarea>
+                              <strong class="label_error"><label ></label></strong>
+                          </div>
+                          <div class="envoyer">
+                              <button class="envoyer-info" type="submit">Create Patient</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </section>
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100">
+                            <table>
+                                <thead>
+                                    <tr class="table100-head">
+                                        <th class="column1">Name</th>
+                                        <th class="column1">age</th>
+                                        <th class="column1">operation price</th>
+                                        <th class="column1">operation name</th>
+                                        <th class="column1">Image</th>
+                                        <th class="column1"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr t-foreach="patients" t-as='patient'>
+                                            <td class="column1" t-esc="patient.name"></td>
+                                            <td class="column1" t-esc="patient.age"></td>
+                                            <td class="column1" t-esc="patient.operation_price"></td>
+                                            <td class="column1" t-esc="patient.operation_name"></td>
+                                            <td class="column1">
+                                              <span t-field="patient.image" t-options="{'widget':'image','preview_image':'image'}"  />
+                                            </td>
+                                            <td class="column1">
+                                                <a t-attf-href="/patient/delete/#{patient.id}">Delete Patient</a>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- <div class="table100">
+                            <table>
+                                <thead>
+                                    <tr class="table100-head">
+                                        <th class="column1">appointment date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <t t-foreach="patients.appoinements" t-as='p'>
+                                            <tr>
+                                                <td class="column1" t-esc="p.appointment_date"></td>
+                                            </tr>
+                                        </t>
+                                </tbody>
+                            </table>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+        <!--===============================================================================================-->	
+      <script src="/hospital/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+      <script src="/hospital/static/vendor/bootstrap/js/popper.js"></script>
+      <script src="/hospital/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+      <script src="/hospital/static/vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+      <script src="/hospital/static/js/main.js"></script>
+
+     <!--  <script> 
+    let form =document.querySelector("#form");
+    let name = document.querySelector("#name");
+    let age = document.querySelector("#age");
+    let email = document.querySelector("#email");
+    let message = document.getElementById("#message");
+    let phone = document.getElementById("phone");
+    let regexname= /^[a-zA-Z]{6}$/;
+    let regexage= /^[0-9]{6}$/;
+    let regexphone= /^(06|07)([0-9]{8})$/;
+    let regexemail= /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    form.addEventListener('submit',e => {
+      let x=0;
+      e.preventDefault();
+        if (name.value.trim() == "") {
+        // label.innerText="";
+        error("labelname","name obligatoire");
+        } else if(!regexformat(regexname,name.value)){
+        error("labelname","name format non valide");
+        } else {
+           success("labelname");
+           x+=1;
+        }
+        if (age.value.trim()=="") {
+          error("labelage","age obligatoire");
+        }  else {
+           success("labelage");
+           x+=1;
+        }
+        if (email.value.trim()=="") {
+        error("labelemail","email obligatoire");
+        } else if(!regexformat(regexemail,email.value)) {
+        error("labelemail","email format non valide");
+        } else {
+           success("labelemail");
+           x+=1;
+        }
+        
+
+      
+      
+    });
+    function error(classname,message) {
+      // let label=document.querySelector("." + classname);
+      let label = document.querySelector(`.${classname}`);
+      label.innerText=message;
+    }
+    function regexformat(regex,input) {
+        return regex.test(input);
+    }
+    function success(classname) {
+      // let label=document.querySelector("." + classname);
+      let label=document.querySelector(`.${classname}`);
+      label.innerText="";
+      // window.setTimeout('window.location="https://waytolearnx.com"; ',2000);
+    } 
+      </script>--> 
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script>
+        $('.formsubmit').submit(function(e) {
+        e.preventDefault();
+       
+        $.ajax({
+        method:"POST",
+        url: "/patient/create",
+        data:$(this).serialize(),
+        success: function(data){
+               Swal.fire({
+                icon: 'success',
+                title: 'Patient added successfully',
+                confirmButtonText: 'Cool',
+              });
+        }});  
+      });
+      </script>
+    </body>
+    </html>
+
+    </template>
+
+</odoo>

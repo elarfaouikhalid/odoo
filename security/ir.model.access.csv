@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital_patient,access_hospital_patient,model_hospital_patient,,1,1,1,1
+access_hospital_doctor,access_hospital_doctor,model_hospital_doctor,,1,1,1,1
+access_hospital_appointment,access_hospital_appointment,model_hospital_appointment,,1,1,1,1
+access_hospital_payment,access_hospital_payment,model_hospital_payment,hospital.group_payments_admin,1,1,1,1

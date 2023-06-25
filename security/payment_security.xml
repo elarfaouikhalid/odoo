@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!--create group-->
+    <record model="ir.module.category" id="module_paymants">
+        <field name="name">Patient</field>
+        <field name="description">payment of patient</field>
+        <field name="sequence">45</field>
+    </record>
+     <record id="group_payments_admin" model="res.groups">
+        <field name="name">Payments module</field>
+        <field name="category_id" ref="module_paymants" />
+    </record>
+
+    <record model="ir.rule" id="payment_rule_car">
+        <field name="name" >Crée les devis</field>
+        <field name="model_id" ref="model_hospital_payment"/>
+        <field name="domain_force">([(1,'=',1)])</field>
+        <field name="groups" eval="[(4,ref('group_payments_admin'))]"/>
+        <field name="perm_create"  eval="1"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_unlink"  eval="1"/>
+        <field name="perm_read"  eval="1"/>
+    </record>
+    </data>
+</odoo>

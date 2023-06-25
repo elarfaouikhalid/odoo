@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+        id="hospital_xlsx"
+        model="hospital.patient"
+        string="Print to XLSX"
+        report_type="xlsx"
+        name="hospital.hospital_xlsx"
+        file="hospital_patient"
+        attachment_use="False"
+    />
+    
+ </odoo>   

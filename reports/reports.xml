@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hospital_patient_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <p>Doctor<span t-field="doc.name"/></p>
+                        <h2>Patients list</h2>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <!-- TODO: remove in master -->
+                                    <t t-set="colspan" t-value="5"/>
+                                    <th name="name" class="text-left">Name</th>
+                                    <th name="age" class="text-right">Age</th>
+                                </tr>
+                            </thead>        
+                            <tbody class="sale_tbody">
+
+                            <t t-foreach="doc.patients" t-as="line">
+
+                                <tr t-att-class="'bg-200 font-weight-bold o_line_section'">
+                                    <t>
+                                        <td class="text-right">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.age"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+
+                            </tbody>
+                         </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report 
+        id="hospital_doctor_reporting"
+        string="Hospital Report"
+        model="hospital.doctor" 
+        report_type="qweb-pdf"
+        file="hospital.hospital_patient_report_template" 
+        name="hospital.hospital_patient_report_template"
+    />
+
+</odoo>
